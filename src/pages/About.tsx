@@ -27,6 +27,7 @@ export default function About() {
             <div className="info-contant">
               <img src={data.flags?.png} alt="" />
               <div className="therd-text">
+
               <div className="first-text-about">
               <div className="capital-div">
               <h1 className="name">{data.name?.common}</h1>
@@ -74,7 +75,6 @@ export default function About() {
                   ))}
                 </div>
               </div>
-
               </div>
             </div>
             {/* Add other details you want to display */}

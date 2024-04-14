@@ -11,5 +11,15 @@ export interface Types {
   to:string
   currency:any
   text:string
-
+}
+ export interface Post {
+  name: {
+    common: string;
+  };
+  flags: {
+    png: string;
+  };
+  population: number;
+  region: string;
+  capital: string;
 }

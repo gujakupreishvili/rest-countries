@@ -62,6 +62,7 @@ export default function Content() {
   return (
     <>
       <Header />
+      
       <div className="input-div">
         <form action="" className="input-form">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -78,7 +79,7 @@ export default function Content() {
       </div>
       <div className="container">
         {datas &&
-          datas.slice(0, 8).map((post: any) => {
+          datas.slice(50, 58).map((post: any) => {
             return (
               <div
                 className="flags-div"
