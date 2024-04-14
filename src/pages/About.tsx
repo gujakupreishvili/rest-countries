@@ -27,26 +27,44 @@ export default function About() {
             <div className="info-contant">
               <img src={data.flags?.png} alt="" />
               <h1 className="name">{data.name?.common}</h1>
-              <p><b>Native Name:</b> {data.name.common || data.altSpellings[1]}</p>
-              <p><b>Population:</b> {data.population}</p>
-              <p><b>Region:</b> {data.region}</p>
-              <p><b>Sub Region:</b> {data.subregion}</p>
-              <p><b>Capital:</b> {data.capital}</p>
+              <p>
+                <b>Native Name:</b> {data.name.common || data.altSpellings[1]}
+              </p>
+              <p>
+                <b>Population:</b> {data.population}
+              </p>
+              <p>
+                <b>Region:</b> {data.region}
+              </p>
+              <p>
+                <b>Sub Region:</b> {data.subregion}
+              </p>
+              <p>
+                <b>Capital:</b> {data.capital}
+              </p>
               <div className="laguages">
-                <p><b>Top Level Domain:</b> {data.tld}</p>
+                <p>
+                  <b>Top Level Domain:</b> {data.tld}
+                </p>
                 <p>
                   <b>Currencies:</b>{" "}
                   {Object.values(data.currencies)
-                    .map((currency) => currency.name)
+                    .map((currency) => (currency as { name: string }).name)
                     .join(", ")}
                 </p>
-                <p><b>Languages:</b> {Object.values(data.languages).join(", ")}</p>
+                <p>
+                  <b>Languages:</b> {Object.values(data.languages).join(", ")}
+                </p>
               </div>
               <div className="border">
-                <p><b>Border Countries:</b> </p>
+                <p>
+                  <b>Border Countries:</b>{" "}
+                </p>
                 <div className="border-btns">
                   {data.borders.map((border: any) => (
-                    <button key={border} className="border-click">{border}</button>
+                    <button key={border} className="border-click">
+                      {border}
+                    </button>
                   ))}
                 </div>
               </div>

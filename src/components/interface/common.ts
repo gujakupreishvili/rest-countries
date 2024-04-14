@@ -9,7 +9,8 @@ export interface Types {
   number:number
   map:()=>void|any
   to:string
-  currency:string
+  currency:any
+  text:string
   
   
 
