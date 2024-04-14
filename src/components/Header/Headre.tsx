@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className={mode ? "dark-mode" : "light-mode"}>
+    <header className={  "dark-mode"}>
       <p>Where in the world?</p>
       <div>
         <FontAwesomeIcon icon={faMoon} />

@@ -11,7 +11,5 @@ export interface Types {
   to:string
   currency:any
   text:string
-  
-  
 
 }

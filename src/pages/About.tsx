@@ -11,7 +11,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div>
+      <div className="about-main-container">
         <Link to="/" className="link">
           <div className="back-div">
             <button className="back">
@@ -26,6 +26,9 @@ export default function About() {
           <>
             <div className="info-contant">
               <img src={data.flags?.png} alt="" />
+              <div className="therd-text">
+              <div className="first-text-about">
+              <div className="capital-div">
               <h1 className="name">{data.name?.common}</h1>
               <p>
                 <b>Native Name:</b> {data.name.common || data.altSpellings[1]}
@@ -42,6 +45,8 @@ export default function About() {
               <p>
                 <b>Capital:</b> {data.capital}
               </p>
+              </div>
+
               <div className="laguages">
                 <p>
                   <b>Top Level Domain:</b> {data.tld}
@@ -56,6 +61,7 @@ export default function About() {
                   <b>Languages:</b> {Object.values(data.languages).join(", ")}
                 </p>
               </div>
+              </div>
               <div className="border">
                 <p>
                   <b>Border Countries:</b>{" "}
@@ -67,6 +73,8 @@ export default function About() {
                     </button>
                   ))}
                 </div>
+              </div>
+
               </div>
             </div>
             {/* Add other details you want to display */}

@@ -45,7 +45,7 @@ export default function Content() {
       fetchData();
     }
   };
-  const handleEnterKeyPress = async (event: any) => {
+  const handleEnterKeyPress = async (event :any) => {
     if (event.key === "Enter") {
       if (text.trim() === "") {
         alert("Please write something...");
@@ -56,8 +56,7 @@ export default function Content() {
         setDatas(filteredCountries);
       }
     }
-};
-
+  };
 
   console.log(text);
   return (

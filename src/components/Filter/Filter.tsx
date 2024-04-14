@@ -6,6 +6,10 @@ export default function Filter() {
   const handleShow = () => {
     setShow(!show);
   };
+  const handleFilter = () =>{
+    console.log("hellow ")
+
+  }
 
 
   return (
@@ -18,7 +22,7 @@ export default function Filter() {
       style={{ transitionDuration: show ? "2.0s" : "0s" }}
       >
         <ul>
-          <li>Africa</li>
+          <li onClick={()=>handleFilter}>Africa</li>
           <li>America</li>
           <li>Asia</li>
           <li>Europe</li>
