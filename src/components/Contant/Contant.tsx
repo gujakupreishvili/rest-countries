@@ -3,14 +3,19 @@ import Filter from "../Filter/Filter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
-// import { Types } from "../interface/common";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 
 export default function Content() {
   const [text, setText] = useState("");
   const [datas, setDatas] = useState([]);
   const navigation = useNavigate();
+
+  const [control, setContorl] = useState(false);
+  const handleControloo = () => {
+    setContorl(!control);
+  };
 
   const handleData = (post: any) => {
     navigation("/about", {
@@ -56,10 +61,10 @@ export default function Content() {
         setDatas(filteredCountries);
       }
     }
-};
+  };
 
-
-  console.log(text);
+  // console.log(text);
+  console.log(control);
   return (
     <>
       <Header />
@@ -73,11 +78,17 @@ export default function Content() {
             onChange={handleInputChange}
             value={text}
             onKeyPress={handleEnterKeyPress}
+            // onClick={handleControloo}
           />
         </form>
-        <Filter />
+
+        <Filter onClick={() => handleControloo()} name={{
+          common: ""
+        }} flags={{
+          png: ""
+        }} population={0} region={""} capital={""} />
       </div>
-      <div className="container">
+      <div className={control ? "container-none" : "container"}>
         {datas &&
           datas.slice(0, 8).map((post: any) => {
             return (

@@ -91,6 +91,16 @@ header div{
   flex-direction: column;
   gap: 40px;
   padding-bottom: 40px;
+  visibility: visible;
+  
+}
+.container-none{
+  visibility: hidden;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
 }
 .input-div{
   display: flex;
@@ -171,6 +181,7 @@ header div{
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
   padding-bottom: 38px;
   color: black;
+  cursor: pointer;
 }
 .flags-div h1,p{
   padding-left: 24px;
@@ -206,8 +217,11 @@ header div{
   align-self: flex-start;
   margin-left: 20px;
   margin-top: 40px;
+  width: 100px;
 }
-.back-div button {
+
+.back{
+  cursor: pointer;
   padding-left: 24px;
   display: flex;
   padding-right: 23px;
@@ -299,6 +313,16 @@ header div{
   top: 420px;
   display: none;
 } */
+
+.flags-container-none{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 320px;
+  position: absolute;
+  top: 420px;
+  display: none;
+}
 
 @media(width>=1024px){
   .input-div{
